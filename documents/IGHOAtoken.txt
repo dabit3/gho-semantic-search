@@ -1,0 +1,34 @@
+IGhoAToken
+Defines the basic interface of the GhoAToken.
+
+The IGhoAToken interface inherits the IAToken and IGhoFacilitator interface.
+
+This page shows the events, write and view methods within the IGhoAToken interface. The source code is available on GitHub: https://github.com/aave/gho-core/blob/main/src/contracts/facilitators/flashMinter/GhoFlashMinter.sol
+
+Events
+VariableDebtTokenSet
+event VariableDebtTokenSet(address indexed variableDebtToken)
+
+Emitted when a reference to the GHO variable debt token is set.
+
+Input Parameters:
+Name	Type	Description
+variableDebtToken	address	The address of the GhoVariableDebtToken contract
+Write Methods
+setVariableDebtToken
+function setVariableDebtToken(address GhoVariableDebtToken) external
+
+Sets a reference to the GHO variable debt token.
+
+Input Parameters:
+Name	Type	Description
+GhoVariableDebtToken	address	The address of the GhoVariableDebtToken contract
+View Methods
+getVariableDebtToken
+function getVariableDebtToken() external view returns (address)
+
+Returns the address of the GHO variable debt token.
+
+Return Values:
+Type	Description
+address	The address of the GhoVariableDebtToken contract
